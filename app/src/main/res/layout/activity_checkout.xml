@@ -8,8 +8,8 @@
 
     <TextView
         android:id="@+id/orderSummaryTextView"
-        android:text="ملخص الطلب"
-        android:textSize="20sp"
+        android:text="Order Confirmation"
+        android:textSize="24sp"
         android:textStyle="bold"
         android:layout_marginBottom="16dp"
         android:layout_width="wrap_content"
@@ -17,7 +17,7 @@
 
     <TextView
         android:id="@+id/orderDetailsTextView"
-        android:text="تم تأكيد الطلب بنجاح!\nسيتم التواصل معك قريبًا."
+        android:text="Thank you for choosing PaintMate!\nYour order is confirmed.\nExpect a call within 24 hours."
         android:textSize="16sp"
         android:textAlignment="center"
         android:layout_width="wrap_content"

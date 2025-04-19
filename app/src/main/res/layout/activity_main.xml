@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -13,79 +14,88 @@
             android:id="@+id/logoImage"
             android:layout_width="150dp"
             android:layout_height="150dp"
-            android:src="@drawable/ic_launcher_foreground"
-            android:layout_gravity="center" />
-
-        <Spinner
-            android:id="@+id/categorySpinner"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_gravity="center"
+            android:src="@drawable/childrencolor"
+            android:contentDescription="Logo" />
 
         <EditText
             android:id="@+id/searchEditText"
-            android:hint="أدخل اسم المنتج"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:hint="Search by color"
+            android:textColorLink="#4CAF50" />
 
         <RadioGroup
             android:id="@+id/durationRadioGroup"
             android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
 
             <RadioButton
                 android:id="@+id/radioDay"
-                android:text="يوم"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:backgroundTint="#FF9800"
+                android:text="1 Day" />
+
             <RadioButton
                 android:id="@+id/radioWeek"
-                android:text="أسبوع"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:backgroundTint="#E91E63"
+                android:text="1 Week" />
+
             <RadioButton
                 android:id="@+id/radioMonth"
-                android:text="شهر"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:backgroundTint="#8BC34A"
+                android:hapticFeedbackEnabled="false"
+                android:text="1 Month" />
         </RadioGroup>
 
         <CheckBox
             android:id="@+id/deliveryCheckbox"
-            android:text="خدمة التوصيل"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-
-        <CheckBox
-            android:id="@+id/cleaningCheckbox"
-            android:text="تنظيف قبل الإرجاع"
+            android:text="Home delivery"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 
         <Switch
             android:id="@+id/notifySwitch"
-            android:text="تفعيل الإشعارات"
+            android:text="Enable availability notifications"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp" />
 
         <Button
             android:id="@+id/searchButton"
-            android:text="بحث"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-        <Button
-            android:id="@+id/cartButton"
-            android:text="عرض السلة"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp" />
+            android:backgroundTint="#4CAF50"
+            android:text="Search"
+            android:textColor="#FFFFFF" />
 
+        <Button
+            android:id="@+id/cartButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="#FF9800"
+            android:shadowColor="#E91E63"
+            android:text="View Cart"
+            android:textColor="@color/white"
+            android:textColorHighlight="@color/white"
+            android:textColorHint="@color/white"
+            android:textColorLink="#E91E63"
+            app:rippleColor="#E91E63"
+            app:strokeColor="#E91E63" />
 
         <ListView
             android:id="@+id/itemsListView"
             android:layout_width="match_parent"
             android:layout_height="300dp"
             android:layout_marginTop="16dp" />
-
     </LinearLayout>
 </ScrollView>

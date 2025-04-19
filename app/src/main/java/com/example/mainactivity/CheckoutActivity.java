@@ -6,18 +6,20 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class CheckoutActivity extends AppCompatActivity {
 
-    TextView orderSummaryTextView, orderDetailsTextView;
+    private TextView orderSummaryTextView;
+    private TextView orderDetailsTextView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_checkout);
 
-        CartManager.clearCart(CheckoutActivity.this);
-
         orderSummaryTextView = findViewById(R.id.orderSummaryTextView);
         orderDetailsTextView = findViewById(R.id.orderDetailsTextView);
 
-        orderDetailsTextView.setText("تم تأكيد الطلب بنجاح!\nسيتم التواصل معك قريبًا.");
+        CartManager.clearCart(CheckoutActivity.this);
+
+        orderSummaryTextView.setText("Order Confirmation");
+        orderDetailsTextView.setText("Your order has been successfully placed.\nWe will contact you within 24 hours.\nThank you!");
     }
 }
